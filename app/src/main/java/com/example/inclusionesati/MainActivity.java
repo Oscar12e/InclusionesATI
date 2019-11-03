@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         groupList = findViewById(R.id.dlist_groups);
         groups = new ArrayList<>();
+        Group soDesign = new Group();
+        soDesign.name = "Disenio de software";
         groupsAdapter = new GroupAdapter(this, groups);
         groupList.setAdapter(groupsAdapter);
     }
@@ -31,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         selectedValue = -1;
+    }
+
+    public void addRow(View view){
+
     }
 
 

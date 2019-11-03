@@ -19,7 +19,6 @@ public class GroupAdapter extends ArrayAdapter<Group> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_group, parent, false);
         }
-
         return convertView;
     }
 }

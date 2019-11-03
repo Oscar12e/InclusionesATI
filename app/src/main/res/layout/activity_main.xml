@@ -113,6 +113,39 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Cursos matriculados"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lin_addedGroups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Widget de inlcusion 1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Widget de inlcusion 1" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Inclusiones registradas:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -146,21 +179,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Elija el grupo para registrar inclusión"
+                android:text="Registre un curso"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/radbtn_matriculado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matriculado" />
+
+                <RadioButton
+                    android:id="@+id/radbtn_inclusion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inlcusion" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Curso: "
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+
 
                 <Spinner
                     android:id="@+id/spinCurso"
@@ -172,13 +221,19 @@
             <ListView
                 android:id="@+id/dlist_groups"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
             </ListView>
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="addRow"
                 android:text="Añadir" />
 
 
